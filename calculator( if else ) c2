@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+	float num1;
+	float num2;
+	float result;
+
+	char selection;
+	printf("Program for calculator\n");
+	printf("press '1', 'A','+','a' for addition\n");
+	printf("press '2', 'S','-','s' for subtraction\n");
+	printf("press '3', 'M','*','m' for multiplication\n");
+	printf("press '4', 'D','/','d' for division\n");
+	scanf("%c",&selection);
+
+
+
+	printf("Enter Num 1:");
+	scanf("%f",&num1);
+	printf("\n");
+
+	printf("Enter Num 2:");
+	scanf("%f",&num2);
+	printf("\n");
+
+	if (selection=='1' || selection=='+' ||selection=='A' ||selection=='a')
+	{
+		result=num1+num2;
+		printf("%0.2f+%0.2f=%0.2f",num1,num2,result);
+		printf("\n");
+	}
+	else if (selection=='4'|| selection=='-' ||selection=='S' ||selection=='s')
+	{
+		result=num1/num2;
+		printf("%0.2f/%0.2f=%0.2f",num1,num2,result);
+		printf("\n");
+	}
+	else if (selection=='3'|| selection=='*' ||selection=='M' ||selection=='m')
+	{
+		result=num1*num2;
+		printf("%0.2f*%0.2f=%0.2f",num1,num2,result);
+		printf("\n");
+	}
+	else if(selection=='2'|| selection=='/' ||selection=='D' ||selection=='d')
+	{
+		result=num1-num2;
+		printf("%0.2f-%0.2f=%0.2f",num1,num2,result);
+		printf("\n");
+	}
+	else
+	{
+		printf("\n i cannot perform this operation");
+	}
+	return 0;
+}
