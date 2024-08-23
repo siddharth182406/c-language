@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  for(int k = 1;k <=100;k++){
+  for(int k = 1;k <=100;k++){     // for infinite use for(;;)
     printf("%d\n",k);
 }
     return 0;
