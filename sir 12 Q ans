@@ -1,0 +1,39 @@
+ #include <stdio.h>
+
+void calculateNotes(int amount) {
+    int notes500 = 0, notes200 = 0, notes100 = 0;
+    int remaining = amount;
+
+
+    notes500 = (remaining / 500) - 1;
+    if (notes500 < 0) notes500 = 0;
+    remaining -= notes500 * 500;
+
+    notes200 = remaining / 200;
+    remaining %= 200;
+
+    notes100 = remaining / 100;
+
+    if (notes100 == 0) {
+        notes200--;
+        notes100 = 2;
+    }
+
+    printf("500 Rs notes: %d\n", notes500);
+    printf("200 Rs notes: %d\n", notes200);
+    printf("100 Rs notes: %d\n", notes100);
+}
+
+int main() {
+    int amount;
+    printf("Enter the amount: ");
+    scanf("%d", &amount);
+
+    if (amount % 100 != 0) {
+        printf("Invalid amount. Please enter a multiple of 100.\n");
+        return 1;
+    }
+
+    calculateNotes(amount);
+    return 0;
+}
