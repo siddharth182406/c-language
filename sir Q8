@@ -1,0 +1,17 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  char c;
+    
+    printf("entre alphabate:");
+    scanf("%c",&c);
+    
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) 
+     printf(" %c is an alphabate ",c);
+     
+    else 
+     printf("%c is not an alphabate",c);
+
+    return 0;
+}
