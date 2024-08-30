@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+  char c;
+    
+    printf("entre alphabate:");
+    scanf("%c",&c);
+    
+    if (c == 'a'|| c =='e'|| c =='i'|| c =='o'|| c =='u' || c == 'A'|| c =='E'|| c =='I'|| c =='O'|| c=='U')
+     printf(" %C is an vowel ",c);
+    else 
+     printf("%C is not an vowel",c);
+
+    return 0;
+}
+
+/* {
+  char c;
+    
+    printf("entre alphabate:");
+    scanf("%c",&c);
+    
+    if (c == 'a','e','i','o','u' || c == 'A','E','I','O','U')
+     printf(" %C is an vowel ",c);
+    else 
+     printf("%C is not an vowel",c);
+
+    return 0;
+}
+/*
