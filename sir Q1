@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    printf("Enter 2 numbers: ");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if(a > b)
+        printf("Number 1 is greater and Number 2 is smaller");
+    else
+        printf("Number 2 is greater and Number 1 is smaller");
+    return 0;
+}
+    
