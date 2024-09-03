@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,i, flag = 0;
+  
+    printf("Enter  starting range: ");
+    scanf("%d", &a);
+  
+    printf("Enter  ending range: ");
+    scanf("%d", &b);
+
+    if (a == 0 || b == 1)
+    {
+        flag = 1;
+    }
+
+   for (int i = a; i < b/2; i++) 
+    {
+        if (i % i == 0)
+            printf("%d is prime no\n", i);
+        else
+            printf("%d is not an prime no\n", i);
+    }
+    
+
+  /*  if (flag == 0)
+        printf("%d is a prime number.\n", a);
+    else
+        printf("%d is not a prime number.\n", b);*/
+
+    return 0;
+}
