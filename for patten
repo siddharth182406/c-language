@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+  int arr_int[9][2];
+  for (int row=0;row<9;row++)
+  {                                                                             // not completed yet
+    for (int col=0;col<2;col++)
+    {
+        printf("%d %d \t",row,col,&arr_int[row][col]);
+    }
+     printf("\n");
+  }
+  {
+      if(col>row){
+        printf("*");
+      }
+      else
+      {
+        printf("%c",ch++);  
+      }    
+  }
+    return 0;
+}
