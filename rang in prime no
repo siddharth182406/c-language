@@ -1,5 +1,4 @@
-include <stdio.h>
-
+#include<stdio.h>
 int main() {
     int a,b,i, flag = 0;
   
@@ -13,14 +12,21 @@ int main() {
     {
         flag = 1;
     }
-
-   for (int i = a; i < b/2; i++) 
+for(int j=a;j<=b;j++)
+{
+   for (int i = 2; i < a/2; i++) 
     {
-        if (i % i == 0)
-            printf("%d is prime no\n", i);
-        else
-            printf("%d is not an prime no\n", i);
+        if (j % i == 0)
+            flag=0;
+            //printf("%d is prime no\n", i);
+        
     }
+
+    if(flag=0)
+    printf("%d is composite",j);
+    else
+    printf("%d is prime",j);
+}
     
 
   /*  if (flag == 0)
