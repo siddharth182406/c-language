@@ -1,0 +1,41 @@
+#include <stdio.h>
+#define MAX_ROWS 5
+#define MAX_COLS 5
+
+int main() {
+    
+int row,col,row2,col2;
+
+printf("Entre any number for row:");
+scanf("%d",&row);
+printf("Entre any number for col:");
+scanf("%d",&col);
+printf("Entre any number for row2:");
+scanf("%d",&row2);
+printf("Entre any number for col2:");
+scanf("%d",&col2);
+
+int arr1_2d[MAX_ROWS][MAX_COLS];
+int arr2_2d[MAX_ROWS][MAX_COLS];
+int result_2d[MAX_ROWS][MAX_COLS];
+
+for (int r=0;r<row;r++)
+{
+for (int c=0;c<col;c++)
+{
+printf("%d\t",arr2_2d[r][c]);
+
+}
+}
+for (int r2=0;r2<row2;r2++)
+{
+for (int c2=0;c2<col2;c2++)
+{
+printf("%d\t",arr2_2d[r2][c2]);
+
+}
+printf("\n");
+
+}
+return 0;
+}
