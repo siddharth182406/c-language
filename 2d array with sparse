@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int arr2d[10][10];
+    int count=0;
+    //display
+    for (int row=0;row<10;row++)
+    {
+        for(int col=0;col<10;col++)
+        {
+            arr2d[row][col]=rand()%100;
+            if (arr2d[row][col]>=15)
+            {
+                arr2d[row][col]=0;
+            }
+            else
+            {
+                count++;
+                
+            }
+            printf("%d\t",arr2d[row][col]);
+        }
+        printf("\n");
+    }
+    printf("\ncount=%d\n",count);
+    
+    int sparse[count][3];
+    int var=0;
+   for(int row=0;row<10;row++)
+   {
+       for(int col=0;col<10;col++)
+       {
+           if (arr2d[row][col]!=0)
+           {
+               sparse[var][0]=row;
+               sparse[var][1]=col;
+               sparse[var][2]=arr2d[row][col];
+               var++;
+           }
+           
+           
+       }
+       
+   }
+   
+   
+    for(int row=0;row<count;row++)
+    {
+        for(int col=0;col<3;col++)
+        {
+            
+            printf("%d\t",sparse[row][col]);
+            
+        }
+        
+        
+        printf("\t%d\n",row+1);
+    }
+    printf("\n Size of original matrix=%d",sizeof(arr2d));
+    printf("\n Size of sparse matrix=%d",sizeof(sparse));
+    return 0;
+}
