@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <string.h>
+
+// Declare and initialize the character array and pointer
+char arr[10];   // Character array
+char *ptr = arr; // Pointer to the character array
+
+// Function to display the array
+void display(char *ptr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%c ", *(ptr + i));
+    }
+    printf("\n");
+}
+
+// Insert a character at a specified position
+void insert(char *ptr, int *size, char element, int position) {
+    for (int i = *size; i >= position; i--) {
+        *(ptr + i + 1) = *(ptr + i);  // Shift right
+    }
+    *(ptr + position) = element;  // Insert element
+    (*size)++;  // Update size
+}
+
+// Delete a character from a specified position
+void delete(char *ptr, int *size, int position) {
+    for (int i = position; i < *size; i++) {
+        *(ptr + i) = *(ptr + i + 1);  // Shift left
+    }
+    (*size)--;  // Update size
+}
+
+// Sort the character array using bubble sort
+void sort(char *ptr, int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (*(ptr + j) > *(ptr + j + 1)) {
+                char temp = *(ptr + j);
+                *(ptr + j) = *(ptr + j + 1);
+                *(ptr + j + 1) = temp;
+            }
+        }
+    }
+}
+
+// Search for a character in the array
+int search(char *ptr, int size, char element) {
+    for (int i = 0; i < size; i++) {
+        if (*(ptr + i) == element) {
+            return i;  // Return the position
+        }
+    }
+    return -1;  // Return -1 if not found
+}
+
+// Update the value at a specific position
+void update(char *ptr, int position, char newValue) {
+    *(ptr + position) = newValue;  // Update value at position
+}
+
+// Reverse the array
+void reverse(char *ptr, int size) {
+    int start = 0, end = size - 1;
+    while (start < end) {
+        char temp = *(ptr + start);
+        *(ptr + start) = *(ptr + end);
+        *(ptr + end) = temp;
+        start++;
+        end--;
+    }
+}
+
+// Main function to demonstrate all operations
+int main() {
+    // Initialize the array
+    strcpy(arr, "hello"); // Initialize array with "hello"
+    int size = strlen(arr); // Get the size of the array
+
+    printf("Initial array: ");
+    display(ptr, size);
+
+    // Insert a character
+    insert(ptr, &size, '!', 5); // Insert '!' at position 5
+    printf("After insert: ");
+    display(ptr, size);
+
+    // Delete a character
+    delete(ptr, &size, 5); // Delete element at position 5
+    printf("After delete: ");
+    display(ptr, size);
+
+    // Sort the array
+    sort(ptr, size);
+    printf("After sorting: ");
+    display(ptr, size);
+
+    // Search for a character
+    int pos = search(ptr, size, 'l');
+    if (pos != -1)
+        printf("Element 'l' found at position: %d\n", pos);
+    else
+        printf("Element 'l' not found\n");
+
+    // Update a character
+    update(ptr, 1, 'a'); // Update character at position 1 to 'a'
+    printf("After update: ");
+    display(ptr, size);
+
+    // Reverse the array
+    reverse(ptr, size);
+    printf("After reversing: ");
+    display(ptr, size);
+
+    return 0;
+}
