@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+   
+   int a = 24;
+   int* ptra = &a;
+   printf(" The addr of a is %p\n",&ptra);
+   // it will print the value of ptra
+   printf(" The addr of a is %p\n",*ptra);
+   // 
+   printf(" The addr of a is %p\n",&a);
+   // it will print the value of a
+   printf(" The addr of a is %d\n",*ptra);
+   // it will print the value of a=24
+   return 0;
+}
