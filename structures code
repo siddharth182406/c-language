@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+struct employee
+{
+    int code; // this declare the new user define data type
+    float salary;
+    char name[10];
+}; // semicoloen is imp
+
+int main() {
+    struct employee e1,e2;
+    
+    e1.code = 5643516;
+  //  e1.name = "siddarth"; // you can write e1.name = you cant use '=' sign after name
+    strcpy(e1.name,"siddharth");
+    e1.salary = 24.24;
+    
+    printf("%d %f %s",e1.code,e1.salary,e1.name);
+
+ return 0;
+}
