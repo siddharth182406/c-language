@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+char st[] ="Siddharth"; //the null char will print directily
+
+printf("%d",strlen(st));
+
+
+    return 0;
+}
