@@ -20,3 +20,35 @@ int main() {
 
  return 0;
 }
+
+// Same code when we take input from user
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+struct employee
+{
+    int code; // this declare the new user define data type
+    float salary;
+    char name[10];
+}; // semicoloen is imp
+
+int main() {
+    struct employee e1,e2,e3;    
+
+    printf("Entre the value of code:");
+    scanf("%d",&e1.code);
+    
+    printf("Entre the value of salary:");
+    scanf("%f",&e1.salary);
+    
+    printf("Entre the value of name:");
+    scanf("%s",&e1.name);  
+    
+    printf("%d %f %s",e1.code,e1.salary,e1.name);
+
+ return 0;
+}
+
+*/
