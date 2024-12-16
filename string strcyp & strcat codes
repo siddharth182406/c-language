@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {                         //code related to strcpy
+
+char st[] ="Siddharth"; 
+
+char target[30];
+strcpy(target,st);
+printf("%s %s",st,target);
+
+    return 0;
+}
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {                         //code related to strcat
+
+char st[] ="Siddharth"; 
+char s1[50] = "Siddharth";
+char s2[50] = "buddy";
+
+char target[30];
+strcat(s1,s2);
+printf("%s",s1);
+
+    return 0;
+}
+*/
+
