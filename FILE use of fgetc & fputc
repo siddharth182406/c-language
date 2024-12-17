@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+  FILE*ptr;
+  ptr = fopen("sidd.txt","r");  
+  char c = fgetc(ptr);           // we use fget c for only reading the file and fput c for writing the file 
+  printf("%c",c);
+
+    return 0;
+}
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+  FILE*ptr;
+  ptr = fopen("siddnew.txt","w");  
+  fputc('c',ptr);
+
+    return 0;
+}
+*/
