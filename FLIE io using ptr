@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    
+    FILE*ptr;
+    ptr = fopen("sidd.txt","r");  // write the file name you have made 
+    int num;
+    fscanf(ptr,"%d",&num);  // it will print the single value you have written in that file 
+    printf("The value of num is %d \n",num)
+  
+   return 0;
+}
