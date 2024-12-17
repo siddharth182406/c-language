@@ -1,4 +1,5 @@
-#include <stdio.h>
+// if you use read 'r' it will read the created file in you folder and if you  write 'w' it eill create new folder 
+#include <stdio.h>      
 
 int main() {
     
