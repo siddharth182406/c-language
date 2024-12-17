@@ -1,0 +1,12 @@
+#include <stdio.h>      
+
+int main() {
+    
+    FILE*fptr;
+    fptr = fopen("sidd.txt","w");  // write the file name you have made 
+    int num = 2424;
+    fprintf(fptr,"%d",num);
+    fclose(fptr);
+  
+   return 0;
+}
